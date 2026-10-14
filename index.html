@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple personal budget and expense tracker project.">
+  <title>Personal Budget &amp; Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img
+        class="logo"
+        src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4b0.svg"
+        alt="Money bag logo"
+        width="56">
+      <div>
+        <p class="eyebrow">PERSONAL FINANCE</p>
+        <h1>Budget Tracker</h1>
+        <p class="subtitle">Know where your money goes. Plan where it should go.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="summary-card" aria-labelledby="welcome-title">
+      <div>
+        <p class="eyebrow">YOUR MONEY, YOUR PLAN</p>
+        <h2 id="welcome-title">Track your spending</h2>
+        <p>Use this simple tracker to record everyday expenses and build better money habits.</p>
+      </div>
+      <div class="summary-icon" aria-hidden="true">📊</div>
+    </section>
+
+    <section class="add-expense-section panel" aria-labelledby="form-title">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <div>
+          <h2 id="form-title">Add an expense</h2>
+          <p>Enter the details below to record a new expense.</p>
+        </div>
+      </div>
+
+      <form id="expense-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="expense-name">Expense name</label>
+            <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries" required>
+          </div>
+          <div class="form-field">
+            <label for="expense-amount">Amount (KES)</label>
+            <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 500" min="0" step="0.01" required>
+          </div>
+          <div class="form-field">
+            <label for="expense-category">Category</label>
+            <select id="expense-category" name="expense-category" required>
+              <option value="">Choose a category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Rent">Rent</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="expense-date">Date</label>
+            <input type="date" id="expense-date" name="expense-date" required>
+          </div>
+        </div>
+        <button type="button" id="add-expense-button">＋ Add Expense</button>
+        <p class="form-note">This button is a visual placeholder for now. Expense saving will be added in a later week.</p>
+      </form>
+    </section>
+
+    <section class="expenses-section panel" aria-labelledby="expenses-title">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <div>
+          <h2 id="expenses-title">Recent expenses</h2>
+          <p>Sample records to demonstrate the expense table.</p>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount (KES)</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Groceries</td><td>KES 850.00</td><td><span class="category-pill food">Food</span></td><td>2026-10-10</td></tr>
+            <tr><td>Matatu fare</td><td>KES 120.00</td><td><span class="category-pill transport">Transport</span></td><td>2026-10-11</td></tr>
+            <tr><td>Room rent</td><td>KES 3,500.00</td><td><span class="category-pill rent">Rent</span></td><td>2026-10-12</td></tr>
+            <tr><td>Football match</td><td>KES 300.00</td><td><span class="category-pill entertainment">Entertainment</span></td><td>2026-10-12</td></tr>
+            <tr><td>Soap and toiletries</td><td>KES 250.00</td><td><span class="category-pill other">Other</span></td><td>2026-10-13</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="help-section panel" aria-labelledby="help-title">
+      <details>
+        <summary id="help-title">How to use this tracker</summary>
+        <div class="details-content">
+          <ol>
+            <li>Enter a short name for the expense.</li>
+            <li>Enter the amount in Kenyan shillings (KES).</li>
+            <li>Choose a category from the dropdown list.</li>
+            <li>Select the date the money was spent.</li>
+            <li>Review the sample table to see how expenses are organised.</li>
+          </ol>
+          <p>Note: the form does not save new expenses yet. JavaScript functionality will be added in a later project week.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="video-section panel" aria-labelledby="video-title">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <div>
+          <h2 id="video-title">Learn a budgeting habit</h2>
+          <p>Watch a short video about managing money and making a budget.</p>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/HQzoZfc3GW4"
+          title="Personal budgeting tips video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Budget Tracker · Week 2 HTML &amp; CSS Assignment</p>
+    <p>Built for learning — sample expenses only.</p>
+  </footer>
+</body>
+</html>
